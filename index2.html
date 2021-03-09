@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>myip</title>
+        <script type="application/javascript">
+            var jsonip = " ";var jsonhostname = " ";var jsoncity = " ";var jsonregion = " ";var jsoncountry = " ";var jsonloc = " ";var jsonorg = " ";var jsontimezone = " ";
+            function getIPInfo() {
+                document.write(`<input class="form-control" type="hidden" name="loginIP" value="`+jsonip+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginHostname" value="`+jsonhostname+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginCity" value="`+jsoncity+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginRegion" value="`+jsonregion+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginCountry" value="`+jsoncountry+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginLoc" value="`+jsonloc+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginOrg" value="`+jsonorg+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginTimezone" value="`+jsontimezone+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginBrowser" value="`+navigator.userAgent+`">`);
+            }
+            function outIPInfo() {
+                document.write("<label>您的IP看起來來自"+jsoncity+","+jsonregion+","+jsoncountry+"</label>");
+            }
+            function getIP(json) {
+                jsonip = json.ip;jsoncity = json.city;jsonregion = json.region;jsoncountry = json.country;jsonloc = json.loc;jsonorg = json.org;jsontimezone = json.timezone;if(json.hostname) jsonhostname = json.hostname;
+            }
+            </script>
+            <script type="application/javascript" src="https://ipinfo.io/json"></script>
+    </head>
+
+    <body>
+        <script type="text/javascript">getIPInfo();</script>
+    </body>
+
+</html>
