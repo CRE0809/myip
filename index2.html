@@ -5,15 +5,15 @@
         <script type="application/javascript">
             var jsonip = " ";var jsonhostname = " ";var jsoncity = " ";var jsonregion = " ";var jsoncountry = " ";var jsonloc = " ";var jsonorg = " ";var jsontimezone = " ";
             function getIPInfo() {
-                document.write(`<input class="form-control" type="hidden" name="loginIP" value="`+jsonip+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginHostname" value="`+jsonhostname+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginCity" value="`+jsoncity+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginRegion" value="`+jsonregion+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginCountry" value="`+jsoncountry+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginLoc" value="`+jsonloc+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginOrg" value="`+jsonorg+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginTimezone" value="`+jsontimezone+`">`);
-                document.write(`<input class="form-control" type="hidden" name="loginBrowser" value="`+navigator.userAgent+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginIP" value="IPv4位置：`+jsonip+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginHostname" value="主機名稱：`+jsonhostname+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginCity" value="城市：`+jsoncity+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginRegion" value="地區：`+jsonregion+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginCountry" value="國家：`+jsoncountry+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginLoc" value="IP座標：`+jsonloc+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginOrg" value="組織：`+jsonorg+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginTimezone" value="時區：`+jsontimezone+`">`);
+                document.write(`<input class="form-control" type="hidden" name="loginBrowser" value="瀏覽器資訊：`+navigator.userAgent+`">`);
             }
             function outIPInfo() {
                 document.write("<label>您的IP看起來來自"+jsoncity+","+jsonregion+","+jsoncountry+"</label>");
@@ -27,6 +27,7 @@
 
     <body>
         <script type="text/javascript">getIPInfo();</script>
+        <h5>Powered by CRE0809 using Ipinfo API</h5>
     </body>
 
 </html>
